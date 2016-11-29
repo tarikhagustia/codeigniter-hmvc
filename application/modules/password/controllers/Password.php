@@ -7,7 +7,7 @@ class Password extends MY_Controller
         parent::__construct();
         $this->load->config('allblue');
     }
-    public function index($password = 1234)
+    public function hash($password = 1234)
     {
       $hash = $this->config->item('vendor_hash');
       $passowrd = $password . $hash;
